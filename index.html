@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devi Tech Solutions</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Root variables for colors */
+    :root {
+      --primary: #4f46e5;       /* Indigo-600 */
+      --secondary: #f3f4f6;     /* Gray-100 */
+      --accent: #6366f1;        /* Indigo-400 */
+      --dark: #111827;          /* Gray-900 */
+      --light: #f9fafb;         /* Gray-50 */
+      --text-primary: #1f2937;  /* Gray-800 */
+      --text-secondary: #4b5563; /* Gray-600 */
+      --shadow: rgba(100, 100, 255, 0.2);
+      --transition: 0.3s ease-in-out;
+    }
+
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--secondary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+      color: white;
+      padding: 60px 20px 80px;
+      text-align: center;
+      box-shadow: 0 4px 15px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      opacity: 0.85;
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      transition: background-color 0.3s;
+    }
+
+    nav a {
+      margin: 0 25px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding-bottom: 5px;
+      border-bottom: 3px solid transparent;
+      transition: border-color var(--transition);
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: -60px auto 60px;
+      padding: 40px 30px 60px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      transition: box-shadow 0.3s ease;
+    }
+
+    main:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      border-left: 5px solid var(--primary);
+      padding-left: 15px;
+      font-weight: 700;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+      font-weight: 500;
+    }
+
+    ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Contact Section */
+    .contact p {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .contact a {
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: var(--light);
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      margin-top: auto;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin: 8px 15px;
+        font-size: 1rem;
+      }
+
+      main {
+        margin: -40px 15px 40px;
+        padding: 30px 20px 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Devi Tech Solutions</h1>
+    <p>Python & Java Automation | Web Scraping | Data Tools</p>
+  </header>
+
+  <nav>
+    <a href="#about" class="active">About Me</a>
+    <a href="#what-we-do">What We Do</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I’m Sudhakaran (Founder) — a skilled developer with over 10 years of experience in Python and Java automation. I specialize in web scraping, data extraction, and building dependable automation tools that streamline business processes. I’m committed to delivering projects on schedule without complications, crafting customized and efficient solutions that adapt to your unique requirements.</p>
+    </section>
+
+    <section id="what-we-do">
+      <h2>What We Do</h2>
+      <ul>
+        <li><strong>Email & Contact Extraction:</strong> Efficiently collect large volumes of emails and contact details from diverse sources such as search engines, social media platforms, and company websites.</li>
+        <li><strong>Python Automation Tools:</strong> Design and develop powerful yet user-friendly Python-based automation scripts and desktop applications that simplify complex workflows.</li>
+        <li><strong>Web Scraping & Metadata Parsing:</strong> Extract valuable structured and unstructured data from websites, directories, and databases with precision and reliability.</li>
+        <li><strong>Fuzzy Mapping & Data Cleanup:</strong> Apply advanced fuzzy logic techniques to clean, normalize, and reconcile inconsistent or messy data sets.</li>
+        <li><strong>All Types of MS Excel & Access Work:</strong> Offer comprehensive solutions for data organization, analysis, and automation in Microsoft Excel and Access databases.</li>
+        <li><strong>Excel Macros:</strong> Develop and optimize Excel macros to automate repetitive tasks and improve productivity for data-intensive operations.</li>
+      </ul>
+      <p>We scrape multiple websites on both large and small scales, delivering the best quality in every project. As a startup, we are committed to excellence and customer satisfaction. Our motto: <em>Scrape everything, deliver quality.</em></p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sudhakaran280@gmail.com">sudhakaran280@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Devi Tech Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple script to highlight the active nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
